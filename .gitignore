@@ -29,7 +29,6 @@ dist-ssr
 .idea/*
 .node_modules
 .node_modules/*
-package-lock.json
 
 ### JetBrains ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
