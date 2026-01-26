@@ -1,24 +1,25 @@
-import { Heading } from './components/Headling/Heading.tsx';
+import { Container } from './components/Container/Container.tsx';
+import { Logo } from './components/Logo/Logo.tsx';
+import { Menu } from './components/Menu/Menu.tsx';
+import { CountDown } from './components/CountDown/CountDown.tsx';
 
 import './styles/theme.css';
 import './styles/global.css';
-import { TimerIcon } from 'lucide-react';
 
 export function App() {
   return (
     <>
-      <Heading>
-        Olá mundo 1
-        <button>
-          <TimerIcon />
-        </button>
-      </Heading>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum cumque
-        incidunt accusamus commodi quasi sit, doloribus in fugiat, repellat
-        laudantium voluptas praesentium labore dolore unde! Aliquam, dolorem! A,
-        quia rerum!
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+
+      <Container>
+        <Menu />
+      </Container>
+
+      <Container>
+        <CountDown />
+      </Container>
     </>
   );
 }
