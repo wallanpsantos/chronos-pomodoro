@@ -2,9 +2,11 @@ import { Container } from './components/Container/Container.tsx';
 import { Logo } from './components/Logo/Logo.tsx';
 import { Menu } from './components/Menu/Menu.tsx';
 import { CountDown } from './components/CountDown/CountDown.tsx';
+import { DefaultInput } from './components/DefaultInput/DefaultInput.tsx';
 
 import './styles/theme.css';
 import './styles/global.css';
+import { Cycles } from './components/Cycles/Cycles.tsx';
 
 export function App() {
   return (
@@ -24,17 +26,20 @@ export function App() {
       <Container>
         <form className='form' action=''>
           <div className='formRow'>
-            <label htmlFor='meuInput'>task</label>
-            <input id='meuInput' type='text' />
+            <DefaultInput
+              id='meuInput'
+              type='text'
+              labelText='task'
+              placeholder='Digite algo...'
+            />
           </div>
 
           <div className='formRow'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div className='formRow'>
-            <p>Ciclos</p>
-            <p> 0 0 0 0 0 0 0</p>
+            <Cycles />
           </div>
 
           <div className='formRow'>

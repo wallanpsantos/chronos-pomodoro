@@ -453,3 +453,6 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+.gemini/
+gha-creds-*.json
