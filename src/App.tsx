@@ -47,7 +47,7 @@ export function App() {
             <DefaultInput
               id='meuInput'
               type='text'
-              labelText='task'
+              labelText={numero.toString()}
               placeholder='Digite algo...'
             />
           </div>
@@ -66,7 +66,6 @@ export function App() {
           </div>
         </form>
       </Container>
-
       <Container>
         <Footer />
       </Container>
