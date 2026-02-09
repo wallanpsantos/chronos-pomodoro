@@ -11,12 +11,12 @@ export function DefaultInput({
   id,
   type,
   labelText,
-  ...params
+  ...props
 }: DefaultInputProps) {
   return (
     <>
       {labelText && <label htmlFor={id}>{labelText}</label>}
-      <input className={styles.input} id={id} type={type} {...params} />
+      <input className={styles.input} id={id} type={type} {...props} />
     </>
   );
 }
