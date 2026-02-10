@@ -11,24 +11,10 @@ import { PlayCircleIcon, StopCircleIcon } from 'lucide-react';
 import './styles/theme.css';
 import './styles/global.css';
 import { Footer } from './components/Footer/Footer.tsx';
-import { useState } from 'react';
-import { Heading } from './components/Headling/Heading.tsx';
 
 export function App() {
-  // Que todos os componentes que usam "numero" escute as mudanças em seu valor.
-
-  // Se usar useState, não deve atribuir um valor inicial/diretamente.
-  const [numero, setNumero] = useState(0);
-
-  function handleClick() {
-    setNumero(prevState => prevState + 1);
-  }
-
   return (
     <>
-      <Heading>Número: {numero}</Heading>
-      <button onClick={handleClick}>Clique aqui</button>
-
       <Container>
         <Logo />
       </Container>
@@ -47,7 +33,7 @@ export function App() {
             <DefaultInput
               id='meuInput'
               type='text'
-              labelText={numero.toString()}
+              labelText='task'
               placeholder='Digite algo...'
             />
           </div>
