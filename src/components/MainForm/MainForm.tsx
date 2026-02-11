@@ -1,7 +1,8 @@
-import { DefaultInput } from '../DefaultInput/DefaultInput.tsx';
+import { PlayCircleIcon } from 'lucide-react';
+
 import { Cycles } from '../Cycles/Cycles.tsx';
 import { DefaultButton } from '../DefaultButton/DefaultButton.tsx';
-import { PlayCircleIcon } from 'lucide-react';
+import { DefaultInput } from '../DefaultInput/DefaultInput.tsx';
 
 export function MainForm() {
   return (

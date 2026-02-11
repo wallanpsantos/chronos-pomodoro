@@ -1,8 +1,8 @@
+import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { HistoryIcon, HouseIcon, MoonIcon, SettingsIcon, SunIcon } from 'lucide-react';
 
 import styles from './Menu.module.css';
-import * as React from 'react';
-import { useEffect, useState } from 'react';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -12,6 +12,7 @@ export function Menu() {
     return (localStorage.getItem('theme') as AvailableThemes) || 'dark';
   });
 
+  // Padrão comum no React chamado Lookup Table (Tabela de Busca)
   const nextThemeIcon = {
     dark: <SunIcon />,
     light: <MoonIcon />,
