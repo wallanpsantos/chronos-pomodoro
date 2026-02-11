@@ -2,7 +2,7 @@ import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from 'lucide-react';
 
 import styles from './Menu.module.css';
 import * as React from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -15,9 +15,27 @@ export function Menu() {
     event.preventDefault(); // Não segue o link (href)
 
     setTheme(prevThem => (prevThem === 'dark' ? 'light' : 'dark'));
-
-    document.documentElement.setAttribute('data-theme', theme);
   }
+
+  useEffect(() => {
+    console.log('useEffect sem dependências', Date.now());
+  }); // Executado toda vez que o componente renderizar na tela
+
+  // Util para quando tiver um API e não precisa ficar buscando dados para utilizar na mesma tela
+  useEffect(() => {
+    console.log('useEffect com array deps vazio', Date.now());
+  }, []); // Executa apenas quando o React monta o componente na tela pela primeira vez
+
+  useEffect(() => {
+    console.log(`useEffect quando o valor do deps mudar. ${theme}`, Date.now());
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Primeiro executa essa função da outra renderização feita na tela
+    // Também conhecida como função de limpeza cleanUp
+    return () => {
+      console.log('Este componente será atualizado, vamos evitar sujeira para não tirar o componente da tela');
+    };
+  }, [theme]);
 
   return (
     <>
