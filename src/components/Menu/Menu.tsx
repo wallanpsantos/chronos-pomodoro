@@ -30,25 +30,13 @@ export function Menu() {
   return (
     <>
       <div className={styles.menu}>
-        <a
-          href='#'
-          aria-label='Ir para a Home'
-          className={styles.menuLink}
-        >
+        <a href='#' aria-label='Ir para a Home' className={styles.menuLink}>
           <HouseIcon />
         </a>
-        <a
-          href='#'
-          aria-label='Ver Histórico'
-          className={styles.menuLink}
-        >
+        <a href='#' aria-label='Ver Histórico' className={styles.menuLink}>
           <HistoryIcon />
         </a>
-        <a
-          href='#'
-          aria-label='Ir para Configurações'
-          className={styles.menuLink}
-        >
+        <a href='#' aria-label='Ir para Configurações' className={styles.menuLink}>
           <SettingsIcon />
         </a>
         <a
