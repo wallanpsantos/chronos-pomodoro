@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { HistoryIcon, HouseIcon, MoonIcon, SettingsIcon, SunIcon } from 'lucide-react';
+import {
+  HistoryIcon,
+  HouseIcon,
+  MoonIcon,
+  SettingsIcon,
+  SunIcon,
+} from 'lucide-react';
 
 import styles from './Menu.module.css';
 
